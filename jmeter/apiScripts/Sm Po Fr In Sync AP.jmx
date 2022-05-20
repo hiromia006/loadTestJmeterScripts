@@ -1,0 +1,1349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="POId" elementType="Argument">
+            <stringProp name="Argument.name">POId</stringProp>
+            <stringProp name="Argument.value">206158483797</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="POPin" elementType="Argument">
+            <stringProp name="Argument.name">POPin</stringProp>
+            <stringProp name="Argument.value">00255040</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="branchCode" elementType="Argument">
+            <stringProp name="Argument.name">branchCode</stringProp>
+            <stringProp name="Argument.value">2332</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="fromDate" elementType="Argument">
+            <stringProp name="Argument.name">fromDate</stringProp>
+            <stringProp name="Argument.value">2022-02-22</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="toDate" elementType="Argument">
+            <stringProp name="Argument.name">toDate</stringProp>
+            <stringProp name="Argument.value">2022-05-22</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="branchId" elementType="Argument">
+            <stringProp name="Argument.name">branchId</stringProp>
+            <stringProp name="Argument.value">759</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="voId" elementType="Argument">
+            <stringProp name="Argument.name">voId</stringProp>
+            <stringProp name="Argument.value">321161</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="voCode" elementType="Argument">
+            <stringProp name="Argument.name">voCode</stringProp>
+            <stringProp name="Argument.value">2031</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="size" elementType="Argument">
+            <stringProp name="Argument.name">size</stringProp>
+            <stringProp name="Argument.value">2000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">X-AUTHORIZATION</stringProp>
+            <stringProp name="Header.value">abcejldjlaksd</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">true</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">localhost</stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding"></stringProp>
+        <stringProp name="filename">user.csv</stringProp>
+        <boolProp name="ignoreFirstLine">true</boolProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">branchCode,branchId,POPin,POId</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Sm Po Fr In Sync AP" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">50</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get buffer-collections " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/buffer-collections?size=1000&amp;lastSyncedTimestamp=2022-02-10T15%3A03%3A57.000%2B0600&amp;page=0&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get remote-queries " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/remote-queries?size=1000&amp;programmeOrganizerId=${POId}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="asset-types" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/asset-types?size=1000&amp;programmeOrganizerId=${POId}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="program-organizer/po-targets" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/program-organizer/${POId}/po-targets?size=1000</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="loan-product-variable-installments" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/loan-product-variable-installments?size=1000&amp;page=0&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="emergency-loan-eligible-member" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/emergency-loan-eligible-member?size=1000&amp;page=0&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="long-term-savings-accounts " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/long-term-savings-accounts?size=1000&amp;lastSyncedTimestamp=2022-02-13T00%3A00%3A00.000%2B0600&amp;page=0&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/savings-accounts " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/savings-accounts?size=1000&amp;lastSyncedTimestamp=2022-02-13T09%3A34%3A03.430%2B0600&amp;page=0&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/programme-organizer/members " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/programme-organizer/${POId}/members?size=1000&amp;lastSyncedTimestamp=2022-02-10T14%3A52%3A58.000%2B0600&amp;page=0&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/buffer-collections" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/buffer-collections?size=1000&amp;lastSyncedTimestamp=2022-02-10T15%3A03%3A57.000%2B0600&amp;page=0&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/business-dates/last-business-date" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/business-dates/last-business-date/5?size=1000</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/savings-accounts-transactions " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/savings-accounts-transactions?size=${size}&amp;lastSyncedTimestamp=2022-02-10T15%3A03%3A57.000%2B0600&amp;page=0&amp;programmeOrganizerId=${POId}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/smart-po-buffer-loan-proposals " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchCode}/smart-po-buffer-loan-proposals?size=1000&amp;lastSyncedTimestamp=2022-02-13T16%3A55%3A31.681%2B0600&amp;page=0&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/passbook-info " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/passbook-info?size=${size}&amp;lastSyncedTimestamp=2022-02-10T15%3A39%3A34.000%2B0600&amp;page=0&amp;programmeOrganizerId=${POId}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/loan-accounts " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/loan-accounts?size=1000&amp;lastSyncedTimestamp=2022-02-13T09%3A33%3A54.000%2B0600&amp;page=0&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/qr-mappers" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/qr-mappers?size=1000&amp;page=0&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/bm-dashboard-report/new/good-loan " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/bm-dashboard-report/new/good-loan?size=1000&amp;page=0&amp;poId=${POId}&amp;programmeOrganizerId=${POId}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/bm-dashboard-report/new/transitioning-borrower" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/bm-dashboard-report/new/transitioning-borrower?fromDate=${fromDate}&amp;size=1000&amp;fromStatus=1&amp;toDate=${toDate}&amp;poId=${POId}&amp;programmeOrganizerId=${POId}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/smart-po-buffer-members" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchCode}/smart-po-buffer-members?size=1000&amp;page=0&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/loan-collections " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/loan-collections?size=1000&amp;lastSyncedTimestamp=2022-02-10T15%3A02%3A07.000%2B0600&amp;page=0&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/personal-info " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/personal-info?size=1000&amp;lastSyncedTimestamp=2022-02-10T14%3A52%3A59.000%2B0600&amp;page=0&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/nominee-info" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/nominee-info?size=1000&amp;page=0&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/loan-proposals  " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/loan-proposals?size=1000&amp;lastSyncedTimestamp=2020-06-16T16%3A14%3A36.402%2B0600&amp;page=0&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JMESPathExtractor guiclass="JMESPathExtractorGui" testclass="JMESPathExtractor" testname="JSON JMESPath Extractor" enabled="true">
+            <stringProp name="JMESExtractor.referenceName">branchesLoanProposalsSize</stringProp>
+            <stringProp name="JMESExtractor.jmesPathExpr">length([])</stringProp>
+            <stringProp name="JMESExtractor.matchNumber">0</stringProp>
+            <stringProp name="JMESExtractor.defaultValue">branchesLoanProposalsSize_NF</stringProp>
+          </JMESPathExtractor>
+          <hashTree/>
+        </hashTree>
+        <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="branchesLoanProposals While Controller" enabled="true">
+          <stringProp name="WhileController.condition">${__javaScript(parseInt(vars.get(&quot;branchesLoanProposalsSize&quot;))==1000)}</stringProp>
+        </WhileController>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="pageZero1" elementType="Argument">
+                <stringProp name="Argument.name">pageZero1</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/loan-proposals" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="page" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${__intSum(${pageZero1},1,pageZero1)}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">page</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/loan-proposals?size=1000&amp;lastSyncedTimestamp=2020-06-16T16%3A14%3A36.402%2B0600&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <JMESPathExtractor guiclass="JMESPathExtractorGui" testclass="JMESPathExtractor" testname="JSON JMESPath Extractor" enabled="true">
+              <stringProp name="JMESExtractor.referenceName">branchesLoanProposalsSize</stringProp>
+              <stringProp name="JMESExtractor.jmesPathExpr">length([])</stringProp>
+              <stringProp name="JMESExtractor.matchNumber">0</stringProp>
+              <stringProp name="JMESExtractor.defaultValue">branchesLoanProposalsSize_NF</stringProp>
+            </JMESPathExtractor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="survey/config" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/survey/config/38?size=1000&amp;programmeOrganizerId=${POId}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/loan-account-transactions " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/loan-account-transactions?size=${size}&amp;lastSyncedTimestamp=2022-02-13T09%3A33%3A54.000%2B0600&amp;page=0&amp;programmeOrganizerId=${POId}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="branches/term-savings-transactions " enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchId}/term-savings-transactions?size=1000&amp;lastSyncedTimestamp=2022-02-13T09%3A31%3A53.000%2B0600&amp;page=0&amp;programmeOrganizerId=${POId}&amp;programmeOrganizerPin=${POPin}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Post smart-po-buffer-members" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+  {&#xd;
+    &quot;acceptanceInSociety&quot;: true,&#xd;
+    &quot;applicationDate&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+    &quot;assignedPoPin&quot;: &quot;255040&quot;,&#xd;
+    &quot;branchCode&quot;: &quot;${branchCode}&quot;,&#xd;
+    &quot;branchId&quot;: ${branchId},&#xd;
+    &quot;contactNo&quot;: &quot;01711${__Random(100000,999999,)}&quot;,&#xd;
+    &quot;isContactNoOnRequest&quot;: true,&#xd;
+    &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+    &quot;educationalQualificationId&quot;: 1,&#xd;
+    &quot;familyMemberMicroFinanceOrganizations&quot;: [&#xd;
+      1,&#xd;
+      3,&#xd;
+      2&#xd;
+    ],&#xd;
+    &quot;isFamilyMemberRelatedToOtherMfo&quot;: true,&#xd;
+    &quot;fatherNameBn&quot;: &quot;মোহাম্মদ ফারুক হোসেন&quot;,&#xd;
+    &quot;fatherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+    &quot;flag&quot;: 1,&#xd;
+    &quot;formerLeavingReasonId&quot;: 2,&#xd;
+    &quot;formerMemberDetails&quot;: {&#xd;
+      &quot;branchName&quot;: &quot;${__RandomString(6,ABCDEFGHIijklmnp,)}&quot;&#xd;
+    },&#xd;
+    &quot;isFormerMemberOfBrac&quot;: true,&#xd;
+    &quot;genderId&quot;: 2,&#xd;
+    &quot;homeImage&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg&quot;,&#xd;
+    &quot;isHomeVisited&quot;: true,&#xd;
+    &quot;id&quot;: &quot;${uuid}&quot;,&#xd;
+    &quot;idCard&quot;: {&#xd;
+      &quot;backImageUrl&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg&quot;,&#xd;
+      &quot;cardTypeId&quot;: 5,&#xd;
+      &quot;frontImageUrl&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg&quot;,&#xd;
+      &quot;idCardNo&quot;: &quot;${__Random(4000000000,9999999999,)}&quot;&#xd;
+    },&#xd;
+    &quot;mandatorySavingsAmount&quot;: 0,&#xd;
+    &quot;maritalStatusId&quot;: 2,&#xd;
+    &quot;memberAssets&quot;: [&#xd;
+      {&#xd;
+        &quot;assetIcon&quot;: 0,&#xd;
+        &quot;assetType&quot;: &quot;Pond&quot;,&#xd;
+        &quot;assetTypeId&quot;: 1,&#xd;
+        &quot;id&quot;: 0,&#xd;
+        &quot;imageUrl&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg&quot;,&#xd;
+        &quot;memberId&quot;: 0,&#xd;
+        &quot;quantity&quot;: 3,&#xd;
+        &quot;value&quot;: ${__Random(5000,9999,)}&#xd;
+      }&#xd;
+    ],&#xd;
+    &quot;memberImageUrl&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg&quot;,&#xd;
+    &quot;memberTypeId&quot;: 1,&#xd;
+    &quot;motherNameBn&quot;: &quot;মোসাম্মৎ হাসিনা বেগম&quot;,&#xd;
+    &quot;motherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+    &quot;nameBn&quot;: &quot;&quot;,&#xd;
+    &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+    &quot;nominees&quot;: [&#xd;
+      {&#xd;
+        &quot;contactNo&quot;: &quot;01644${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;idCard&quot;: {&#xd;
+          &quot;cardTypeId&quot;: 2,&#xd;
+          &quot;frontImageUrl&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg&quot;,&#xd;
+          &quot;idCardNo&quot;: &quot;${__Random(40000000000000000,99999999999999999,)}&quot;,&#xd;
+          &quot;issuePlace&quot;: &quot;&quot;&#xd;
+        },&#xd;
+        &quot;imageUrl&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg&quot;,&#xd;
+        &quot;name&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;relationshipId&quot;: 7,&#xd;
+        &quot;sharePercent&quot;: 100&#xd;
+      }&#xd;
+    ],&#xd;
+    &quot;numberOfFamilyMemberWithLoan&quot;: 4,&#xd;
+    &quot;occupationId&quot;: 10,&#xd;
+    &quot;passbookNumber&quot;: &quot;${__Random(1000000,9999999,)}&quot;,&#xd;
+    &quot;isPassbookRequired&quot;: true,&#xd;
+    &quot;permanentAddress&quot;: &quot;${__Random(1000,9999,)}&quot;,&#xd;
+    &quot;permanentDistrictId&quot;: 9,&#xd;
+    &quot;permanentDivisionId&quot;: 3,&#xd;
+    &quot;permanentUpazilaId&quot;: 69,&#xd;
+    &quot;poId&quot;: ${__Random(500000000000,999999999999,)},&#xd;
+    &quot;presentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+    &quot;isPresentAddressPermanentAddressSame&quot;: true,&#xd;
+    &quot;presentDistrictId&quot;: 9,&#xd;
+    &quot;presentDivisionId&quot;: 3,&#xd;
+    &quot;presentUpazilaId&quot;: 69,&#xd;
+    &quot;projectCode&quot;: &quot;15&quot;,&#xd;
+    &quot;projectId&quot;: 1,&#xd;
+    &quot;savingsProductId&quot;: 11,&#xd;
+    &quot;spouseDateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+    &quot;spouseIdCard&quot;: {&#xd;
+      &quot;backImageUrl&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg&quot;,&#xd;
+      &quot;cardTypeId&quot;: 2,&#xd;
+      &quot;frontImageUrl&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/20220227152138.jpg&quot;,&#xd;
+      &quot;idCardNo&quot;: &quot;${__Random(40000000000000000,99999999999999999,)}&quot;&#xd;
+    },&#xd;
+    &quot;mSpouseIdCardJson&quot;: &quot;{\&quot;backImageUrl\&quot;:\&quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg\&quot;,\&quot;cardTypeId\&quot;:2,\&quot;frontImageUrl\&quot;:\&quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg\&quot;,\&quot;idCardNo\&quot;:\&quot;${__Random(40000000000000000,99999999999999999,)}\&quot;}&quot;,&#xd;
+    &quot;spouseNameBn&quot;: &quot;কমল হোসাঈন খান&quot;,&#xd;
+    &quot;spouseNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+    &quot;targetAmount&quot;: 500,&#xd;
+    &quot;voCode&quot;: &quot;${voCode}&quot;,&#xd;
+    &quot;voId&quot;: ${voId},&#xd;
+    &quot;pending&quot;: false,&#xd;
+    &quot;syncStatus&quot;: false&#xd;
+  }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/smart-po-buffer-members</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor Get Number from Date Time" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+ SimpleDateFormat simpleDateFormat = new SimpleDateFormat(&quot;yyyyMMddHHmmssSSS&quot;);
+ String date = simpleDateFormat.format(new Date());
+ log.info(&quot; Number :: &quot;+date);
+ vars.put(&quot;pictureNumber&quot;, date);
+
+ String uuid = UUID.randomUUID().toString();
+ log.info(&quot; uuid  :: &quot;+uuid);
+ vars.put(&quot;uuid&quot;, uuid);</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST smart-po-buffer-loan-proposals" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+  {&#xd;
+    &quot;applicationDate&quot;: &quot;${__Random(2020,2021,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+    &quot;approvedGrantAmount&quot;: 0,&#xd;
+    &quot;approvedLoanAmount&quot;: 0,&#xd;
+    &quot;bankAccountNumber&quot;: &quot;${__Random(400000000000,999999999999,)}&quot;,&#xd;
+    &quot;bankBranchId&quot;: 284,&#xd;
+    &quot;bankId&quot;: 2,&#xd;
+    &quot;bankLoanMonthlyInstallmentAmount&quot;: 554,&#xd;
+    &quot;branchCode&quot;: &quot;${branchCode}&quot;,&#xd;
+    &quot;branchId&quot;: ${branchId},&#xd;
+    &quot;ceremonyExpense&quot;: ${__Random(400,999,)},&#xd;
+    &quot;doesMemberArriveCenterWithinTen&quot;: true,&#xd;
+    &quot;earningFromMainSourceMonthly&quot;: ${__Random(4000,9999,)},&#xd;
+    &quot;earningSourceName&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+    &quot;educationalExpense&quot;: ${__Random(400,999,)},&#xd;
+    &quot;estimatedAnnualExpense&quot;: 0,&#xd;
+    &quot;familyExpense&quot;: 0,&#xd;
+    &quot;familyUnderAnotherLoan&quot;: true,&#xd;
+    &quot;familyWitnessId&quot;: {&#xd;
+      &quot;cardTypeId&quot;: 2,&#xd;
+      &quot;idCardNo&quot;: &quot;${__Random(40000000000000000,99999999999999999,)}&quot;&#xd;
+    },&#xd;
+    &quot;familyWitnessImage&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/20220227153030.jpg&quot;,&#xd;
+    &quot;familyWitnessName&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+    &quot;familyWitnessPhoneNumber&quot;: &quot;01686${__Random(100000,999999,)}&quot;,&#xd;
+    &quot;firstChildIncome&quot;: ${__Random(4000,9999,)},&#xd;
+    &quot;firstChildName&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+    &quot;flag&quot;: 1,&#xd;
+    &quot;foodExpense&quot;: ${__Random(400,999,)},&#xd;
+    &quot;frequencyId&quot;: 3,&#xd;
+    &quot;guarantors&quot;: [&#xd;
+      {&#xd;
+        &quot;genderId&quot;: 2,&#xd;
+        &quot;address&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;contactNo&quot;: &quot;01568${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;idCard&quot;: {&#xd;
+          &quot;cardTypeId&quot;: 2,&#xd;
+          &quot;frontImageUrl&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/20220227152908.jpg&quot;,&#xd;
+          &quot;idCardNo&quot;: &quot;${__Random(40000000000000000,99999999999999999,)}&quot;,&#xd;
+          &quot;issuePlace&quot;: &quot;&quot;&#xd;
+        },&#xd;
+        &quot;imageUrl&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg&quot;,&#xd;
+        &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;relationshipId&quot;: 7,&#xd;
+        &quot;mSharePercent&quot;: 0&#xd;
+      }&#xd;
+    ],&#xd;
+    &quot;guardianOccupation&quot;: &quot;6&quot;,&#xd;
+    &quot;houseRent&quot;: ${__Random(400,999,)},&#xd;
+    &quot;husbandIncomeSourcePrimary&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+    &quot;husbandIncomeSourceSecondary&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+    &quot;husbandMonthlyIncome&quot;: ${__Random(400000,999999,)},&#xd;
+    &quot;installmentAmount&quot;: ${__Random(4000,9999,)},&#xd;
+    &quot;insuranceProductId&quot;: 16,&#xd;
+    &quot;interestRate&quot;: 24,&#xd;
+    &quot;largeGroupLeaderImage&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg&quot;,&#xd;
+    &quot;largeGroupLeaderMemberNumber&quot;: ${__Random(40000,99999,)},&#xd;
+    &quot;largeGroupLeaderName&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+    &quot;livingTimeInCurrentPlace&quot;: 24,&#xd;
+    &quot;loanApprover&quot;: 3,&#xd;
+    &quot;isLoanConsistent&quot;: true,&#xd;
+    &quot;loanProductDetailsId&quot;: 1165,&#xd;
+    &quot;loanProductId&quot;: 42,&#xd;
+    &quot;loanProposalStatusId&quot;: 1,&#xd;
+    &quot;loanSecurityAmount&quot;: 0,&#xd;
+    &quot;loanType&quot;: &quot;নতুন লোন&quot;,&#xd;
+    &quot;id&quot;: &quot;${uuid}&quot;,&#xd;
+    &quot;medicalExpense&quot;: 900,&#xd;
+    &quot;isMemberHouseOwner&quot;: true,&#xd;
+    &quot;memberId&quot;: 16461937,&#xd;
+    &quot;microInsurance&quot;: true,&#xd;
+    &quot;monthlyCashInHand&quot;: ${__Random(400000,999999,)},&#xd;
+    &quot;monthlyInstallmentForProposedLoan&quot;: ${__Random(4000,9999,)},&#xd;
+    &quot;motherOccupation&quot;: 9,&#xd;
+    &quot;noOfInstallment&quot;: 18,&#xd;
+    &quot;noOfPreviousLoanFromBrac&quot;: 2,&#xd;
+    &quot;numOfDependants&quot;: 3,&#xd;
+    &quot;numOfEarningPersons&quot;: 2,&#xd;
+    &quot;numOfFamilyMembers&quot;: 5,&#xd;
+    &quot;numberOfChildGoToSchool&quot;: 2,&#xd;
+    &quot;organizationWitnessImage&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg&quot;,&#xd;
+    &quot;organizationWitnessName&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+    &quot;otherDebt&quot;: ${__Random(4000,9999,)},&#xd;
+    &quot;otherLoanOutstanding&quot;: 0,&#xd;
+    &quot;otherLoanTotal&quot;: 0,&#xd;
+    &quot;otherOrgLoanMontlyInstallmentAmount&quot;: ${__Random(400,999,)},&#xd;
+    &quot;otherOrgSavingsExpense&quot;: ${__Random(4000,9999,)},&#xd;
+    &quot;otherSavingsAmount&quot;: 0,&#xd;
+    &quot;othersExpense&quot;: ${__Random(400,999,)},&#xd;
+    &quot;poId&quot;: ${POId},&#xd;
+    &quot;policyTypeId&quot;: 2,&#xd;
+    &quot;premiumAmount&quot;: 0,&#xd;
+    &quot;projectCode&quot;: &quot;15&quot;,&#xd;
+    &quot;projectId&quot;: 1,&#xd;
+    &quot;proposalDurationInMonths&quot;: 18,&#xd;
+    &quot;proposedGrantAmount&quot;: 0,&#xd;
+    &quot;proposedLoanAmount&quot;: 35000,&#xd;
+    &quot;proposedPo&quot;: 255040,&#xd;
+    &quot;reasonForLoan&quot;: &quot;health&quot;,&#xd;
+    &quot;rejectionReason&quot;: &quot;ok&quot;,&#xd;
+    &quot;routingNumber&quot;: &quot;${__Random(4000000,9999999,)}&quot;,&#xd;
+    &quot;schemeId&quot;: 352,&#xd;
+    &quot;schoolName&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+    &quot;secondChildIncome&quot;: ${__Random(400,999,)},&#xd;
+    &quot;secondChildName&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+    &quot;secondInsurer&quot;: {&#xd;
+      &quot;genderId&quot;: 1,&#xd;
+      &quot;address&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+      &quot;contactNo&quot;: &quot;01682${__Random(100000,999999,)}&quot;,&#xd;
+      &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+      &quot;idCard&quot;: {&#xd;
+        &quot;cardTypeId&quot;: 2,&#xd;
+        &quot;frontImageUrl&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg&quot;,&#xd;
+        &quot;idCardNo&quot;: &quot;${__Random(40000000000000000,99999999999999999,)}&quot;,&#xd;
+        &quot;issuePlace&quot;: &quot;&quot;&#xd;
+      },&#xd;
+      &quot;imageUrl&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg&quot;,&#xd;
+      &quot;memberErpId&quot;: 0,&#xd;
+      &quot;name&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+      &quot;relationshipId&quot;: 7,&#xd;
+      &quot;relationshipName&quot;: &quot;Father&quot;&#xd;
+    },&#xd;
+    &quot;sectorId&quot;: 17,&#xd;
+    &quot;smallGroupLeaderImage&quot;: &quot;file:///storage/emulated/0/Android/data/com.bracits.smartpo.debug/files/Pictures/${pictureNumber}.jpg&quot;,&#xd;
+    &quot;smallGroupLeaderMemberNumber&quot;: ${__Random(4000,9999,)},&#xd;
+    &quot;smallGroupLeaderName&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+    &quot;smallGroupNo&quot;: &quot;25&quot;,&#xd;
+    &quot;statusId&quot;: 0,&#xd;
+    &quot;subSectorId&quot;: 27,&#xd;
+    &quot;tinNumber&quot;: &quot;${__Random(4000,9999,)}&quot;,&#xd;
+    &quot;toleranceLimit&quot;: 0,&#xd;
+    &quot;totalDebt&quot;: ${__Random(4000,9999,)},&#xd;
+    &quot;totalEarningMonthly&quot;: ${__Random(400000,999999,)},&#xd;
+    &quot;totalExpense&quot;: ${__Random(4000,9999,)},&#xd;
+    &quot;totalPovertyScore&quot;: 0,&#xd;
+    &quot;utilityExpense&quot;: ${__Random(4000,9999,)},&#xd;
+    &quot;voCode&quot;: &quot;${voCode}&quot;,&#xd;
+    &quot;voId&quot;: ${voId},&#xd;
+    &quot;pending&quot;: false,&#xd;
+    &quot;syncStatus&quot;: false&#xd;
+  }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/smart-po-buffer-loan-proposals</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor Get Number from Date Time" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+ SimpleDateFormat simpleDateFormat = new SimpleDateFormat(&quot;yyyyMMddHHmmssSSS&quot;);
+ String date = simpleDateFormat.format(new Date());
+ log.info(&quot; Number :: &quot;+date);
+ vars.put(&quot;pictureNumber&quot;, date);
+
+ String uuid = UUID.randomUUID().toString();
+ log.info(&quot; uuid  :: &quot;+uuid);
+ vars.put(&quot;uuid&quot;, uuid);</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Post buffer-collections " enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+  {&#xd;
+    &quot;branchCode&quot;: &quot;${branchCode}&quot;,&#xd;
+    &quot;branchId&quot;: ${branchId},&#xd;
+    &quot;projectCode&quot;: &quot;15&quot;,&#xd;
+    &quot;projectId&quot;: 1,&#xd;
+    &quot;voCode&quot;: &quot;${voCode}&quot;,&#xd;
+    &quot;voId&quot;: ${voId},&#xd;
+    &quot;pending&quot;: false,&#xd;
+    &quot;syncStatus&quot;: false,&#xd;
+    &quot;accountId&quot;: 0,&#xd;
+    &quot;accountNo&quot;: &quot;24923501&quot;,&#xd;
+    &quot;bkashAccountNo&quot;: &quot;&quot;,&#xd;
+    &quot;bkashAccountType&quot;: &quot;&quot;,&#xd;
+    &quot;collectionAmount&quot;: ${__Random(5000,9999,)},&#xd;
+    &quot;collectionDate&quot;: &quot;${__Random(2020,2022,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+    &quot;collectionDateTime&quot;: &quot;${__Random(2020,2022,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+    &quot;collectionFor&quot;: &quot;L&quot;,&#xd;
+    &quot;collectionMethodId&quot;: 1,&#xd;
+    &quot;memberId&quot;: 16458314,&#xd;
+    &quot;memberNo&quot;: &quot;52&quot;,&#xd;
+    &quot;transactionId&quot;: ${__Random(400000000000000000,999999999999999999,)},&#xd;
+    &quot;transactionNoBkash&quot;: &quot;&quot;&#xd;
+  }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchCode}/buffer-collections</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor Get Number from Date Time" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+ SimpleDateFormat simpleDateFormat = new SimpleDateFormat(&quot;yyyyMMddHHmmssSSS&quot;);
+ String date = simpleDateFormat.format(new Date());
+ log.info(&quot; Number :: &quot;+date);
+ vars.put(&quot;pictureNumber&quot;, date);
+
+ String uuid = UUID.randomUUID().toString();
+ log.info(&quot; uuid  :: &quot;+uuid);
+ vars.put(&quot;uuid&quot;, uuid);</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Post qr-mappers " enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+  {&#xd;
+    &quot;branchId&quot;: ${branchId},&#xd;
+    &quot;id&quot;: 0,&#xd;
+    &quot;memberId&quot;: 16461937,&#xd;
+    &quot;qrCode&quot;: &quot;${uuid}&quot;,&#xd;
+    &quot;pending&quot;: false,&#xd;
+    &quot;syncStatus&quot;: false,&#xd;
+    &quot;updatedAt&quot;: &quot;${__Random(2021,2022,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;&#xd;
+  }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/qr-mappers</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor Get Number from Date Time" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+ SimpleDateFormat simpleDateFormat = new SimpleDateFormat(&quot;yyyyMMddHHmmssSSS&quot;);
+ String date = simpleDateFormat.format(new Date());
+ log.info(&quot; Number :: &quot;+date);
+ vars.put(&quot;pictureNumber&quot;, date);
+
+ String uuid = UUID.randomUUID().toString();
+ log.info(&quot; uuid  :: &quot;+uuid);
+ vars.put(&quot;uuid&quot;, uuid);</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Post remote-queries " enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+  {&#xd;
+    &quot;updatedAt&quot;: &quot;${__Random(2021,2022,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+    &quot;id&quot;: &quot;${uuid}&quot;,&#xd;
+    &quot;branchId&quot;: ${branchId},&#xd;
+    &quot;poId&quot;: ${POId},&#xd;
+    &quot;voId&quot;: ${voId},&#xd;
+    &quot;command&quot;: &quot;select * from scheme Limit 1&quot;,&#xd;
+    &quot;result&quot;: &quot;[{\&quot;mSchemeCode\&quot;:\&quot;0182\&quot;,\&quot;mSectorId\&quot;:\&quot;3\&quot;,\&quot;mSetupDate\&quot;:\&quot;2018-08-02\&quot;,\&quot;mSchemeName\&quot;:\&quot;Unknown Scheme\&quot;,\&quot;mDescription\&quot;:\&quot;Unknown Scheme\&quot;,\&quot;mSchemeRefCode\&quot;:\&quot;1307,4301,740,741,742,743,744,745\&quot;,\&quot;mActive\&quot;:\&quot;1\&quot;,\&quot;mSubSectorId\&quot;:\&quot;15\&quot;,\&quot;mEffectiveDate\&quot;:\&quot;2018-08-02\&quot;,\&quot;id\&quot;:\&quot;1\&quot;,\&quot;nameEn\&quot;:\&quot;null\&quot;,\&quot;nameBn\&quot;:\&quot;null\&quot;,\&quot;deleted\&quot;:\&quot;null\&quot;}]&quot;,&#xd;
+    &quot;status&quot;: true&#xd;
+  }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/remote-queries</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor Get Number from Date Time" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+ SimpleDateFormat simpleDateFormat = new SimpleDateFormat(&quot;yyyyMMddHHmmssSSS&quot;);
+ String date = simpleDateFormat.format(new Date());
+ log.info(&quot; Number :: &quot;+date);
+ vars.put(&quot;pictureNumber&quot;, date);
+
+ String uuid = UUID.randomUUID().toString();
+ log.info(&quot; uuid  :: &quot;+uuid);
+ vars.put(&quot;uuid&quot;, uuid);</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST phonebook" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+  {&#xd;
+    &quot;actorId&quot;: 16461937,&#xd;
+    &quot;actorTypeId&quot;: 1,&#xd;
+    &quot;createdAt&quot;: &quot;${__Random(2021,2022,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+    &quot;createdBy&quot;: ${POId},&#xd;
+    &quot;id&quot;: &quot;${uuid}&quot;,&#xd;
+    &quot;isDefault&quot;: true,&#xd;
+    &quot;phoneNo&quot;: &quot;01630${__Random(100000,999999,)}&quot;,&#xd;
+    &quot;relationship&quot;: &quot;&quot;,&#xd;
+    &quot;syncStatus&quot;: false&#xd;
+  }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/phonebook</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor Get Number from Date Time" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+ SimpleDateFormat simpleDateFormat = new SimpleDateFormat(&quot;yyyyMMddHHmmssSSS&quot;);
+ String date = simpleDateFormat.format(new Date());
+ log.info(&quot; Number :: &quot;+date);
+ vars.put(&quot;pictureNumber&quot;, date);
+
+ String uuid = UUID.randomUUID().toString();
+ log.info(&quot; uuid  :: &quot;+uuid);
+ vars.put(&quot;uuid&quot;, uuid);</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

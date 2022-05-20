@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="branchCode" elementType="Argument">
+            <stringProp name="Argument.name">branchCode</stringProp>
+            <stringProp name="Argument.value">4818</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">true</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">localhost</stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding"></stringProp>
+        <stringProp name="filename">user.csv</stringProp>
+        <boolProp name="ignoreFirstLine">true</boolProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">j_username,j_username_txt,j_password</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Dc AP" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">20</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Bulk create buffer members" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+    {&#xd;
+        &quot;applicationDate&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;assignedPoPin&quot;: &quot;00165123&quot;,&#xd;
+        &quot;bankAccountNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;bankBranchId&quot;: 5,&#xd;
+        &quot;bankId&quot;: 1,&#xd;
+        &quot;bkashWalletNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;branchCode&quot;: &quot;${branchCode}&quot;,&#xd;
+        &quot;contactNo&quot;: &quot;01711${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;educationId&quot;: 1,&#xd;
+        &quot;fatherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;flag&quot;: 1,&#xd;
+        &quot;genderId&quot;: 3,&#xd;
+        &quot;guarantor&quot;: [{&#xd;
+            &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+            &quot;idCard&quot;: {&#xd;
+                &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;cardTypeId&quot;: 2738,&#xd;
+                &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;idCardNo&quot;: &quot;${__Random(5000000000000,9999999999999,)}&quot;,&#xd;
+                &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                &quot;issuePlace&quot;: &quot;Sweet Lips&quot;&#xd;
+            },&#xd;
+            &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;relationshipId&quot;: 3&#xd;
+        }],&#xd;
+        &quot;id&quot;: &quot;${myUUID}&quot;,&#xd;
+        &quot;idCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;${__Random(3000000000000,9999999999999,)}&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;&#xd;
+        },&#xd;
+        &quot;maritalStatusId&quot;: 1,&#xd;
+        &quot;memberId&quot;: 98765,&#xd;
+        &quot;memberImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;memberTypeId&quot;: 2,&#xd;
+        &quot;motherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nominees&quot;: [&#xd;
+            {&#xd;
+                &quot;contactNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+                &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+                &quot;idCard&quot;: {&#xd;
+                    &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;cardTypeId&quot;: 2738,&#xd;
+                    &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                    &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;idCardNo&quot;: &quot;${__Random(4000000000000,9999999999999,)}&quot;,&#xd;
+                    &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                    &quot;issuePlace&quot;: &quot;Wurgsburn&quot;&#xd;
+                },&#xd;
+                &quot;name&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;relationshipId&quot;: 24&#xd;
+            }&#xd;
+        ],&#xd;
+        &quot;occupationId&quot;: 2,&#xd;
+        &quot;passbookNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;permanentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;permanentDistrictId&quot;: 14,&#xd;
+        &quot;permanentUpazilaId&quot;: 165,&#xd;
+        &quot;poId&quot;: 3,&#xd;
+        &quot;presentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;presentDistrictId&quot;: 14,&#xd;
+        &quot;presentUpazilaId&quot;: 163,&#xd;
+        &quot;projectCode&quot;: &quot;60&quot;,&#xd;
+        &quot;rejectionReason&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;routingNumber&quot;: 1234,&#xd;
+        &quot;savingsProductId&quot;: 11,&#xd;
+        &quot;spouseDateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;spouseIdCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;5555555555554444&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;&#xd;
+        },&#xd;
+        &quot;spouseNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;statusId&quot;: 1,&#xd;
+        &quot;targetAmount&quot;: ${__Random(1000,99999,)},&#xd;
+        &quot;tinNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;updated&quot;: true&#xd;
+    },&#xd;
+	{&#xd;
+        &quot;applicationDate&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;assignedPoPin&quot;: &quot;00165123&quot;,&#xd;
+        &quot;bankAccountNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;bankBranchId&quot;: 5,&#xd;
+        &quot;bankId&quot;: 1,&#xd;
+        &quot;bkashWalletNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;branchCode&quot;: &quot;${branchCode}&quot;,&#xd;
+        &quot;contactNo&quot;: &quot;01711${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;educationId&quot;: 1,&#xd;
+        &quot;fatherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;flag&quot;: 1,&#xd;
+        &quot;genderId&quot;: 3,&#xd;
+        &quot;guarantor&quot;: [{&#xd;
+            &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+            &quot;idCard&quot;: {&#xd;
+                &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;cardTypeId&quot;: 2738,&#xd;
+                &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;idCardNo&quot;: &quot;${__Random(5000000000000,9999999999999,)}&quot;,&#xd;
+                &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                &quot;issuePlace&quot;: &quot;Sweet Lips&quot;&#xd;
+            },&#xd;
+            &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;relationshipId&quot;: 3&#xd;
+        }],&#xd;
+        &quot;id&quot;: &quot;${myUUID2}&quot;,&#xd;
+        &quot;idCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;${__Random(3000000000000,9999999999999,)}&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;&#xd;
+        },&#xd;
+        &quot;maritalStatusId&quot;: 1,&#xd;
+        &quot;memberId&quot;: 98765,&#xd;
+        &quot;memberImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;memberTypeId&quot;: 2,&#xd;
+        &quot;motherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nominees&quot;: [&#xd;
+            {&#xd;
+                &quot;contactNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+                &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+                &quot;idCard&quot;: {&#xd;
+                    &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;cardTypeId&quot;: 2738,&#xd;
+                    &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                    &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;idCardNo&quot;: &quot;${__Random(4000000000000,9999999999999,)}&quot;,&#xd;
+                    &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                    &quot;issuePlace&quot;: &quot;Wurgsburn&quot;&#xd;
+                },&#xd;
+                &quot;name&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;relationshipId&quot;: 24&#xd;
+            }&#xd;
+        ],&#xd;
+        &quot;occupationId&quot;: 2,&#xd;
+        &quot;passbookNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;permanentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;permanentDistrictId&quot;: 14,&#xd;
+        &quot;permanentUpazilaId&quot;: 165,&#xd;
+        &quot;poId&quot;: 3,&#xd;
+        &quot;presentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;presentDistrictId&quot;: 14,&#xd;
+        &quot;presentUpazilaId&quot;: 163,&#xd;
+        &quot;projectCode&quot;: &quot;60&quot;,&#xd;
+        &quot;rejectionReason&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;routingNumber&quot;: 1234,&#xd;
+        &quot;savingsProductId&quot;: 11,&#xd;
+        &quot;spouseDateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;spouseIdCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;5555555555554444&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;&#xd;
+        },&#xd;
+        &quot;spouseNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;statusId&quot;: 1,&#xd;
+        &quot;targetAmount&quot;: ${__Random(1000,99999,)},&#xd;
+        &quot;tinNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;updated&quot;: true&#xd;
+    },&#xd;
+	{&#xd;
+        &quot;applicationDate&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;assignedPoPin&quot;: &quot;00165123&quot;,&#xd;
+        &quot;bankAccountNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;bankBranchId&quot;: 5,&#xd;
+        &quot;bankId&quot;: 1,&#xd;
+        &quot;bkashWalletNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;branchCode&quot;: &quot;${branchCode}&quot;,&#xd;
+        &quot;contactNo&quot;: &quot;01711${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;educationId&quot;: 1,&#xd;
+        &quot;fatherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;flag&quot;: 1,&#xd;
+        &quot;genderId&quot;: 3,&#xd;
+        &quot;guarantor&quot;: [{&#xd;
+            &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+            &quot;idCard&quot;: {&#xd;
+                &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;cardTypeId&quot;: 2738,&#xd;
+                &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;idCardNo&quot;: &quot;${__Random(5000000000000,9999999999999,)}&quot;,&#xd;
+                &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                &quot;issuePlace&quot;: &quot;Sweet Lips&quot;&#xd;
+            },&#xd;
+            &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;relationshipId&quot;: 3&#xd;
+        }],&#xd;
+        &quot;id&quot;: &quot;${myUUID3}&quot;,&#xd;
+        &quot;idCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;${__Random(3000000000000,9999999999999,)}&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;&#xd;
+        },&#xd;
+        &quot;maritalStatusId&quot;: 1,&#xd;
+        &quot;memberId&quot;: 98765,&#xd;
+        &quot;memberImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;memberTypeId&quot;: 2,&#xd;
+        &quot;motherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nominees&quot;: [&#xd;
+            {&#xd;
+                &quot;contactNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+                &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+                &quot;idCard&quot;: {&#xd;
+                    &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;cardTypeId&quot;: 2738,&#xd;
+                    &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                    &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;idCardNo&quot;: &quot;${__Random(4000000000000,9999999999999,)}&quot;,&#xd;
+                    &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                    &quot;issuePlace&quot;: &quot;Wurgsburn&quot;&#xd;
+                },&#xd;
+                &quot;name&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;relationshipId&quot;: 24&#xd;
+            }&#xd;
+        ],&#xd;
+        &quot;occupationId&quot;: 2,&#xd;
+        &quot;passbookNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;permanentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;permanentDistrictId&quot;: 14,&#xd;
+        &quot;permanentUpazilaId&quot;: 165,&#xd;
+        &quot;poId&quot;: 3,&#xd;
+        &quot;presentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;presentDistrictId&quot;: 14,&#xd;
+        &quot;presentUpazilaId&quot;: 163,&#xd;
+        &quot;projectCode&quot;: &quot;60&quot;,&#xd;
+        &quot;rejectionReason&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;routingNumber&quot;: 1234,&#xd;
+        &quot;savingsProductId&quot;: 11,&#xd;
+        &quot;spouseDateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;spouseIdCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;5555555555554444&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;&#xd;
+        },&#xd;
+        &quot;spouseNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;statusId&quot;: 1,&#xd;
+        &quot;targetAmount&quot;: ${__Random(1000,99999,)},&#xd;
+        &quot;tinNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;updated&quot;: true&#xd;
+    },&#xd;
+	{&#xd;
+        &quot;applicationDate&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;assignedPoPin&quot;: &quot;00165123&quot;,&#xd;
+        &quot;bankAccountNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;bankBranchId&quot;: 5,&#xd;
+        &quot;bankId&quot;: 1,&#xd;
+        &quot;bkashWalletNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;branchCode&quot;: &quot;${branchCode}&quot;,&#xd;
+        &quot;contactNo&quot;: &quot;01711${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;educationId&quot;: 1,&#xd;
+        &quot;fatherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;flag&quot;: 1,&#xd;
+        &quot;genderId&quot;: 3,&#xd;
+        &quot;guarantor&quot;:[ {&#xd;
+            &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+            &quot;idCard&quot;: {&#xd;
+                &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;cardTypeId&quot;: 2738,&#xd;
+                &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;idCardNo&quot;: &quot;${__Random(5000000000000,9999999999999,)}&quot;,&#xd;
+                &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                &quot;issuePlace&quot;: &quot;Sweet Lips&quot;&#xd;
+            },&#xd;
+            &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;relationshipId&quot;: 3&#xd;
+        }],&#xd;
+        &quot;id&quot;: &quot;${myUUID4}&quot;,&#xd;
+        &quot;idCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;${__Random(3000000000000,9999999999999,)}&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;&#xd;
+        },&#xd;
+        &quot;maritalStatusId&quot;: 1,&#xd;
+        &quot;memberId&quot;: 98765,&#xd;
+        &quot;memberImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;memberTypeId&quot;: 2,&#xd;
+        &quot;motherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nominees&quot;: [&#xd;
+            {&#xd;
+                &quot;contactNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+                &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+                &quot;idCard&quot;: {&#xd;
+                    &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;cardTypeId&quot;: 2738,&#xd;
+                    &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                    &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;idCardNo&quot;: &quot;${__Random(4000000000000,9999999999999,)}&quot;,&#xd;
+                    &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                    &quot;issuePlace&quot;: &quot;Wurgsburn&quot;&#xd;
+                },&#xd;
+                &quot;name&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;relationshipId&quot;: 24&#xd;
+            }&#xd;
+        ],&#xd;
+        &quot;occupationId&quot;: 2,&#xd;
+        &quot;passbookNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;permanentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;permanentDistrictId&quot;: 14,&#xd;
+        &quot;permanentUpazilaId&quot;: 165,&#xd;
+        &quot;poId&quot;: 3,&#xd;
+        &quot;presentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;presentDistrictId&quot;: 14,&#xd;
+        &quot;presentUpazilaId&quot;: 163,&#xd;
+        &quot;projectCode&quot;: &quot;60&quot;,&#xd;
+        &quot;rejectionReason&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;routingNumber&quot;: 1234,&#xd;
+        &quot;savingsProductId&quot;: 11,&#xd;
+        &quot;spouseDateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;spouseIdCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;5555555555554444&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;&#xd;
+        },&#xd;
+        &quot;spouseNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;statusId&quot;: 1,&#xd;
+        &quot;targetAmount&quot;: ${__Random(1000,99999,)},&#xd;
+        &quot;tinNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;updated&quot;: true&#xd;
+    },&#xd;
+	{&#xd;
+        &quot;applicationDate&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;assignedPoPin&quot;: &quot;00165123&quot;,&#xd;
+        &quot;bankAccountNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;bankBranchId&quot;: 5,&#xd;
+        &quot;bankId&quot;: 1,&#xd;
+        &quot;bkashWalletNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;branchCode&quot;: &quot;${branchCode}&quot;,&#xd;
+        &quot;contactNo&quot;: &quot;01711${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;educationId&quot;: 1,&#xd;
+        &quot;fatherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;flag&quot;: 1,&#xd;
+        &quot;genderId&quot;: 3,&#xd;
+        &quot;guarantor&quot;: [{&#xd;
+            &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+            &quot;idCard&quot;: {&#xd;
+                &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;cardTypeId&quot;: 2738,&#xd;
+                &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;idCardNo&quot;: &quot;${__Random(5000000000000,9999999999999,)}&quot;,&#xd;
+                &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                &quot;issuePlace&quot;: &quot;Sweet Lips&quot;&#xd;
+            },&#xd;
+            &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;relationshipId&quot;: 3&#xd;
+        }],&#xd;
+        &quot;id&quot;: &quot;${myUUID5}&quot;,&#xd;
+        &quot;idCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;${__Random(3000000000000,9999999999999,)}&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;&#xd;
+        },&#xd;
+        &quot;maritalStatusId&quot;: 1,&#xd;
+        &quot;memberId&quot;: 98765,&#xd;
+        &quot;memberImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;memberTypeId&quot;: 2,&#xd;
+        &quot;motherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nominees&quot;: [&#xd;
+            {&#xd;
+                &quot;contactNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+                &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+                &quot;idCard&quot;: {&#xd;
+                    &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;cardTypeId&quot;: 2738,&#xd;
+                    &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                    &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;idCardNo&quot;: &quot;${__Random(4000000000000,9999999999999,)}&quot;,&#xd;
+                    &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                    &quot;issuePlace&quot;: &quot;Wurgsburn&quot;&#xd;
+                },&#xd;
+                &quot;name&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;relationshipId&quot;: 24&#xd;
+            }&#xd;
+        ],&#xd;
+        &quot;occupationId&quot;: 2,&#xd;
+        &quot;passbookNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;permanentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;permanentDistrictId&quot;: 14,&#xd;
+        &quot;permanentUpazilaId&quot;: 165,&#xd;
+        &quot;poId&quot;: 3,&#xd;
+        &quot;presentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;presentDistrictId&quot;: 14,&#xd;
+        &quot;presentUpazilaId&quot;: 163,&#xd;
+        &quot;projectCode&quot;: &quot;60&quot;,&#xd;
+        &quot;rejectionReason&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;routingNumber&quot;: 1234,&#xd;
+        &quot;savingsProductId&quot;: 11,&#xd;
+        &quot;spouseDateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;spouseIdCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;5555555555554444&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;&#xd;
+        },&#xd;
+        &quot;spouseNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;statusId&quot;: 1,&#xd;
+        &quot;targetAmount&quot;: ${__Random(1000,99999,)},&#xd;
+        &quot;tinNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;updated&quot;: true&#xd;
+    }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/buffer-members</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">//log.info(&quot;myUUID : &quot;+UUID.randomUUID().toString());
+vars.put(&quot;myUUID&quot;,UUID.randomUUID().toString());
+vars.put(&quot;myUUID2&quot;,UUID.randomUUID().toString());
+vars.put(&quot;myUUID3&quot;,UUID.randomUUID().toString());
+vars.put(&quot;myUUID4&quot;,UUID.randomUUID().toString());
+vars.put(&quot;myUUID5&quot;,UUID.randomUUID().toString());</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">bufferId</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">[0].id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">memberId_NF</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Bulk create buffer members 2" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+    {&#xd;
+        &quot;applicationDate&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;assignedPoPin&quot;: &quot;00165123&quot;,&#xd;
+        &quot;bankAccountNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;bankBranchId&quot;: 5,&#xd;
+        &quot;bankId&quot;: 1,&#xd;
+        &quot;bkashWalletNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;branchCode&quot;: &quot;${branchCode}&quot;,&#xd;
+        &quot;contactNo&quot;: &quot;01711${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;educationId&quot;: 1,&#xd;
+        &quot;fatherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;flag&quot;: 1,&#xd;
+        &quot;genderId&quot;: 3,&#xd;
+        &quot;guarantor&quot;: [{&#xd;
+            &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+            &quot;idCard&quot;: {&#xd;
+                &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;cardTypeId&quot;: 2738,&#xd;
+                &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;idCardNo&quot;: &quot;${__Random(5000000000000,9999999999999,)}&quot;,&#xd;
+                &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                &quot;issuePlace&quot;: &quot;Sweet Lips&quot;&#xd;
+            },&#xd;
+            &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;relationshipId&quot;: 3&#xd;
+        }],&#xd;
+        &quot;id&quot;: &quot;${myUUID}&quot;,&#xd;
+        &quot;idCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;${__Random(3000000000000,9999999999999,)}&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;&#xd;
+        },&#xd;
+        &quot;maritalStatusId&quot;: 1,&#xd;
+        &quot;memberId&quot;: 98765,&#xd;
+        &quot;memberImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;memberTypeId&quot;: 2,&#xd;
+        &quot;motherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nominees&quot;: [&#xd;
+            {&#xd;
+                &quot;contactNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+                &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+                &quot;idCard&quot;: {&#xd;
+                    &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;cardTypeId&quot;: 2738,&#xd;
+                    &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                    &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;idCardNo&quot;: &quot;${__Random(4000000000000,9999999999999,)}&quot;,&#xd;
+                    &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                    &quot;issuePlace&quot;: &quot;Wurgsburn&quot;&#xd;
+                },&#xd;
+                &quot;name&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;relationshipId&quot;: 24&#xd;
+            }&#xd;
+        ],&#xd;
+        &quot;occupationId&quot;: 2,&#xd;
+        &quot;passbookNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;permanentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;permanentDistrictId&quot;: 14,&#xd;
+        &quot;permanentUpazilaId&quot;: 165,&#xd;
+        &quot;poId&quot;: 3,&#xd;
+        &quot;presentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;presentDistrictId&quot;: 14,&#xd;
+        &quot;presentUpazilaId&quot;: 163,&#xd;
+        &quot;projectCode&quot;: &quot;60&quot;,&#xd;
+        &quot;rejectionReason&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;routingNumber&quot;: 1234,&#xd;
+        &quot;savingsProductId&quot;: 11,&#xd;
+        &quot;spouseDateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;spouseIdCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;5555555555554444&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;&#xd;
+        },&#xd;
+        &quot;spouseNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;statusId&quot;: 1,&#xd;
+        &quot;targetAmount&quot;: ${__Random(1000,99999,)},&#xd;
+        &quot;tinNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;updated&quot;: true&#xd;
+    }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/buffer-members</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">//log.info(&quot;myUUID : &quot;+UUID.randomUUID().toString());
+vars.put(&quot;myUUID&quot;,UUID.randomUUID().toString());
+vars.put(&quot;myUUID2&quot;,UUID.randomUUID().toString());
+vars.put(&quot;myUUID3&quot;,UUID.randomUUID().toString());
+vars.put(&quot;myUUID4&quot;,UUID.randomUUID().toString());
+vars.put(&quot;myUUID5&quot;,UUID.randomUUID().toString());</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">bufferId</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">[0].id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">memberId_NF</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="single create buffer members" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+    {&#xd;
+        &quot;applicationDate&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;assignedPoPin&quot;: &quot;00165123&quot;,&#xd;
+        &quot;bankAccountNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;bankBranchId&quot;: 5,&#xd;
+        &quot;bankId&quot;: 1,&#xd;
+        &quot;bkashWalletNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;branchCode&quot;: &quot;${branchCode}&quot;,&#xd;
+        &quot;contactNo&quot;: &quot;01711${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;educationId&quot;: 1,&#xd;
+        &quot;fatherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;flag&quot;: 1,&#xd;
+        &quot;genderId&quot;: 3,&#xd;
+        &quot;guarantor&quot;: [{&#xd;
+            &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+            &quot;idCard&quot;: {&#xd;
+                &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;cardTypeId&quot;: 2738,&#xd;
+                &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;idCardNo&quot;: &quot;${__Random(5000000000000,9999999999999,)}&quot;,&#xd;
+                &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                &quot;issuePlace&quot;: &quot;Sweet Lips&quot;&#xd;
+            },&#xd;
+            &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;relationshipId&quot;: 3&#xd;
+        }],&#xd;
+        &quot;id&quot;: &quot;${myUUIDSingle}&quot;,&#xd;
+        &quot;idCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;${__Random(3000000000000,9999999999999,)}&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;&#xd;
+        },&#xd;
+        &quot;maritalStatusId&quot;: 1,&#xd;
+        &quot;memberId&quot;: 98765,&#xd;
+        &quot;memberImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;memberTypeId&quot;: 2,&#xd;
+        &quot;motherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nominees&quot;: [&#xd;
+            {&#xd;
+                &quot;contactNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+                &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+                &quot;idCard&quot;: {&#xd;
+                    &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;cardTypeId&quot;: 2738,&#xd;
+                    &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                    &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;idCardNo&quot;: &quot;${__Random(4000000000000,9999999999999,)}&quot;,&#xd;
+                    &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                    &quot;issuePlace&quot;: &quot;Wurgsburn&quot;&#xd;
+                },&#xd;
+                &quot;name&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;relationshipId&quot;: 24&#xd;
+            }&#xd;
+        ],&#xd;
+        &quot;occupationId&quot;: 2,&#xd;
+        &quot;passbookNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;permanentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;permanentDistrictId&quot;: 14,&#xd;
+        &quot;permanentUpazilaId&quot;: 165,&#xd;
+        &quot;poId&quot;: 3,&#xd;
+        &quot;presentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;presentDistrictId&quot;: 14,&#xd;
+        &quot;presentUpazilaId&quot;: 163,&#xd;
+        &quot;projectCode&quot;: &quot;60&quot;,&#xd;
+        &quot;rejectionReason&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;routingNumber&quot;: 1234,&#xd;
+        &quot;savingsProductId&quot;: 11,&#xd;
+        &quot;spouseDateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;spouseIdCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;5555555555554444&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;&#xd;
+        },&#xd;
+        &quot;spouseNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;statusId&quot;: 1,&#xd;
+        &quot;targetAmount&quot;: ${__Random(1000,99999,)},&#xd;
+        &quot;tinNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;updated&quot;: true&#xd;
+    }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/buffer-members</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">//log.info(&quot;myUUID : &quot;+UUID.randomUUID().toString());
+vars.put(&quot;myUUIDSingle&quot;,UUID.randomUUID().toString());</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">bufferId</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">[0].id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">memberId_NF</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get list of BufferMember" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/branches/${branchCode}/buffer-members</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get a BufferMember by id" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/buffer-members/${myUUIDSingle}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update a BufferMember" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+        &quot;applicationDate&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;assignedPoPin&quot;: &quot;00165123&quot;,&#xd;
+        &quot;bankAccountNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;bankBranchId&quot;: 5,&#xd;
+        &quot;bankId&quot;: 1,&#xd;
+        &quot;bkashWalletNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;branchCode&quot;: &quot;${branchCode}&quot;,&#xd;
+        &quot;contactNo&quot;: &quot;01711${__Random(100000,999999,)}&quot;,&#xd;
+        &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;educationId&quot;: 1,&#xd;
+        &quot;fatherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;flag&quot;: 2,&#xd;
+        &quot;genderId&quot;: 3,&#xd;
+        &quot;guarantor&quot;: [{&#xd;
+            &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+            &quot;idCard&quot;: {&#xd;
+                &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;cardTypeId&quot;: 2738,&#xd;
+                &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;idCardNo&quot;: &quot;${__Random(5000000000000,9999999999999,)}&quot;,&#xd;
+                &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                &quot;issuePlace&quot;: &quot;Sweet Lips&quot;&#xd;
+            },&#xd;
+            &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;relationshipId&quot;: 3&#xd;
+        }],&#xd;
+        &quot;id&quot;: &quot;${bufferId}&quot;,&#xd;
+        &quot;idCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;${__Random(3000000000000,9999999999999,)}&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;&#xd;
+        },&#xd;
+        &quot;maritalStatusId&quot;: 1,&#xd;
+        &quot;memberId&quot;: 98765,&#xd;
+        &quot;memberImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;memberTypeId&quot;: 2,&#xd;
+        &quot;motherNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;nominees&quot;: [&#xd;
+            {&#xd;
+                &quot;contactNo&quot;: &quot;01911${__Random(100000,999999,)}&quot;,&#xd;
+                &quot;dateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+                &quot;idCard&quot;: {&#xd;
+                    &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;cardTypeId&quot;: 2738,&#xd;
+                    &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+                    &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                    &quot;idCardNo&quot;: &quot;${__Random(4000000000000,9999999999999,)}&quot;,&#xd;
+                    &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+                    &quot;issuePlace&quot;: &quot;Wurgsburn&quot;&#xd;
+                },&#xd;
+                &quot;name&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+                &quot;relationshipId&quot;: 24&#xd;
+            }&#xd;
+        ],&#xd;
+        &quot;occupationId&quot;: 2,&#xd;
+        &quot;passbookNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;permanentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;permanentDistrictId&quot;: 14,&#xd;
+        &quot;permanentUpazilaId&quot;: 165,&#xd;
+        &quot;poId&quot;: 3,&#xd;
+        &quot;presentAddress&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}, ${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;presentDistrictId&quot;: 14,&#xd;
+        &quot;presentUpazilaId&quot;: 163,&#xd;
+        &quot;projectCode&quot;: &quot;60&quot;,&#xd;
+        &quot;rejectionReason&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;,&#xd;
+        &quot;routingNumber&quot;: 1234,&#xd;
+        &quot;savingsProductId&quot;: 11,&#xd;
+        &quot;spouseDateOfBirth&quot;: &quot;${__Random(1985,1998,byea)}-${__Random(10,12,bmont)}-${__Random(10,28,bda)}&quot;,&#xd;
+        &quot;spouseIdCard&quot;: {&#xd;
+            &quot;backImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;cardTypeId&quot;: 2738,&#xd;
+            &quot;expiryDate&quot;: &quot;2022-09-14&quot;,&#xd;
+            &quot;frontImageUrl&quot;: &quot;https://dummyimage.com/200x200&amp;text=${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+            &quot;idCardNo&quot;: &quot;5555555555554444&quot;,&#xd;
+            &quot;issueDate&quot;: &quot;2021-09-04&quot;,&#xd;
+            &quot;issuePlace&quot;: &quot;${__RandomString(20,QRSTUVWXYZabcdefgh1234567,)}&quot;&#xd;
+        },&#xd;
+        &quot;spouseNameEn&quot;: &quot;${__RandomString(5,ABCDEFGHIijklmnp,)} ${__RandomString(5,ABCDEFGHIijklmnp,)}&quot;,&#xd;
+        &quot;statusId&quot;: 1,&#xd;
+        &quot;targetAmount&quot;: ${__Random(1000,99999,)},&#xd;
+        &quot;tinNumber&quot;: &quot;${__Random(1000000000000,9999999999999,)}&quot;,&#xd;
+        &quot;updated&quot;: true&#xd;
+    }</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1/buffer-members/${bufferId}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
