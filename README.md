@@ -14,3 +14,4 @@
     - Add **HTTP Request** Sampler
     - Add **View Results Tree** listener
     - Add **Summary Report** Summary Report
+![img.png](images/simpleScript.png)    
