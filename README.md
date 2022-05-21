@@ -2,7 +2,7 @@
 
 ### Pre-Request Softwares
 * [Download & Install JDK](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
-* [Download & extract Jmeter Binaries Zip](https://jmeter.apache.org/download_jmeter.cgi)
+* [Download & extract JMeter Binaries Zip](https://jmeter.apache.org/download_jmeter.cgi)
 * Set environment variable(path) -  Set JAVA_HOME
 
 ### Open Jmeter GUI to create Script
@@ -14,4 +14,15 @@
     - Add **HTTP Request** Sampler
     - Add **View Results Tree** listener
     - Add **Summary Report** Summary Report
-![img.png](images/simpleScript.png)    
+![img.png](images/simpleScript.png)   
+
+### Meter HTTP(S) Test Script Recorder
+* [Add FoxyProxy FireFox Standard extension for Jmeter Recording](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
+  - Add Proxy
+    - Add **localhost** as Proxy IP address or DNS name value
+    - Add **8888** Port value
+    - Click **Save**
+![img.png](images/FoxyProxy.png)     
+
+
+* [JMeter configuration for Script Recording ](https://jmeter.apache.org/usermanual/jmeter_proxy_step_by_step.html)
