@@ -22,8 +22,6 @@
     - Add **localhost** as Proxy IP address or DNS name value
     - Add **8888** Port value
     - Click **Save**
- <p align="center">   
-<img width="200" height="200" src="images/FoxyProxy.png">
-</p>
+![img.png](images/FoxyProxy.png)  
 
 * [JMeter configuration for Script Recording ](https://jmeter.apache.org/usermanual/jmeter_proxy_step_by_step.html)
