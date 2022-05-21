@@ -23,7 +23,7 @@
     - Add **8888** Port value
     - Click **Save**
  <p align="center">   
-<img width="400" height="400" src="images/FoxyProxy.png">
+<img width="400" height="300" src="images/FoxyProxy.png">
 </p>
 
 * [JMeter configuration for Script Recording ](https://jmeter.apache.org/usermanual/jmeter_proxy_step_by_step.html)
