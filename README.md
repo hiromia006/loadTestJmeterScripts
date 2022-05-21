@@ -34,4 +34,4 @@
 - Add **URL Patterns to Include** which want to record   
     - .\*IP or Domain.\* Example : .\*opensource-demo.orangehrmlive.com.\*
   - Add **URL Patterns to Exclude** which don't want to record
-    - (?i).\*\\.(bmp|css|js|gif|ico|jpe?g|png|swf|woff|woff2|ttf)(.*)(?i).*\.(bmp|css|js|gif|ico|jpe?g|png|swf|woff|woff2|ttf)(.\*)
+    - (?i).\*\\.(bmp|css|js|gif|ico|jpe?g|png|jpg|swf|woff|woff2|ttf)(.\*)
