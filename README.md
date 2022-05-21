@@ -27,3 +27,9 @@
 </p>
 
 * [JMeter configuration for Script Recording ](https://jmeter.apache.org/usermanual/jmeter_proxy_step_by_step.html)
+* HTTP(S) Test Script Recorder - Test Plan Creation
+    -  Select Target Controller (Select Created Thread Group)
+
+* HTTP(S) Test Script Recorder - Requests Filtering
+  - Add **URL Patterns to Include** which want to record
+  - Add **URL Patterns to Exclude** which don't want to record
